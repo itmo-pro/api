@@ -1,0 +1,165 @@
+openapi: 3.0.1
+info:
+  title: Awesome API definition
+  version: 1.0.0
+paths:
+  /api/v1/book:
+    get:
+      tags:
+        - Book
+      summary: Get books page
+      operationId: getBookPage
+      parameters:
+        - name: page
+          in: query
+          description: Zero-based page index (0..N)
+          required: false
+          schema:
+            minimum: 0
+            type: integer
+            default: 0
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BookPage'
+        '500':
+          description: Internal error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    post:
+      tags:
+        - Book
+      summary: Add new book
+      operationId: addBook
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Book'
+        required: true
+      responses:
+        '201':
+          description: Book just added by request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Book'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+components:
+  schemas:
+    Book:
+      required:
+        - name
+        - author
+        - year
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+        author:
+          type: string
+        year:
+          type: integer
+          format: int32
+    BookPage:
+      required:
+        - content
+        - empty
+        - first
+        - last
+        - number
+        - numberOfElements
+        - pageable
+        - size
+        - sort
+        - totalElements
+        - totalPages
+      type: object
+      properties:
+        totalPages:
+          type: integer
+          format: int32
+        totalElements:
+          type: integer
+          format: int64
+        size:
+          type: integer
+          format: int32
+        content:
+          type: array
+          items:
+            $ref: '#/components/schemas/Book'
+        number:
+          type: integer
+          format: int32
+        sort:
+          type: string
+        first:
+          type: boolean
+        pageable:
+          $ref: '#/components/schemas/Pageable'
+        last:
+          type: boolean
+        numberOfElements:
+          type: integer
+          format: int32
+        empty:
+          type: boolean
+    Pageable:
+      type: object
+      properties:
+        offset:
+          type: integer
+          format: int64
+        sort:
+          $ref: '#/components/schemas/Sort'
+        pageNumber:
+          type: integer
+          format: int32
+        pageSize:
+          type: integer
+          format: int32
+        unpaged:
+          type: boolean
+        paged:
+          type: boolean
+    Sort:
+      type: object
+      properties:
+        empty:
+          type: boolean
+        sorted:
+          type: boolean
+        unsorted:
+          type: boolean
+    Error:
+      type: object
+      properties:
+        code:
+          type: string
+        messages:
+          type: array
+          items:
+            type: string
+
+
+
