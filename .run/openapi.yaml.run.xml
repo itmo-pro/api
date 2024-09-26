@@ -1,0 +1,46 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="openapi.yaml" type="SwaggerCodegen" editBeforeRun="true" show_console_on_std_err="false" show_console_on_std_out="false">
+    <option name="allowRunningInParallel" value="false" />
+    <option name="customTemplatesPath" value="" />
+    <option name="envs">
+      <map />
+    </option>
+    <option name="generateToPath" value="$PROJECT_DIR$/src/main/gen" />
+    <option name="generationParameters">
+      <list>
+        <CliArgumentViewModel>
+          <option name="name" value="serializationLibrary" />
+          <option name="value" value="jackson" />
+        </CliArgumentViewModel>
+        <CliArgumentViewModel>
+          <option name="name" value="packageName" />
+          <option name="value" value="ru.itmo.api" />
+        </CliArgumentViewModel>
+        <CliArgumentViewModel>
+          <option name="name" value="modelPackage" />
+          <option name="value" value="ru.itmo.api.model" />
+        </CliArgumentViewModel>
+        <CliArgumentViewModel>
+          <option name="name" value="modelMutable" />
+          <option name="value" value="false" />
+        </CliArgumentViewModel>
+        <CliArgumentViewModel>
+          <option name="name" value="apiPackage" />
+          <option name="value" value="ru.itmo.api.model.api" />
+        </CliArgumentViewModel>
+      </list>
+    </option>
+    <option name="generatorType" value="OPENAPI_GENERATOR_V6" />
+    <option name="jdkPath" value="$APPLICATION_HOME_DIR$/jbr/Contents/Home/bin/java" />
+    <option name="language" value="kotlin-spring" />
+    <option name="passParentEnvs" value="true" />
+    <option name="programParameters" />
+    <option name="projectPathOnTarget" />
+    <option name="selectedOptions">
+      <list />
+    </option>
+    <option name="specificationPath" value="$PROJECT_DIR$/openapi.yaml" />
+    <option name="workingDirectory" value="$PROJECT_DIR$" />
+    <method v="2" />
+  </configuration>
+</component>
