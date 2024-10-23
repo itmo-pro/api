@@ -1,5 +1,3 @@
-import org.openapitools.generator.gradle.plugin.tasks.GenerateTask
-
 plugins {
     kotlin("jvm") version "1.9.25"
     kotlin("plugin.spring") version "1.9.25"
@@ -21,6 +19,11 @@ repositories {
     mavenCentral()
 }
 
+val gen = "$projectDir/src/main/gen"
+val openapiGeneratorPluginVer = "7.8.0"
+val springDocVer = "1.7.0"
+val swaggerAnnotationsVer = "2.2.23"
+
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-actuator")
     implementation("org.springframework.boot:spring-boot-starter-web")
@@ -28,9 +31,9 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
 
     implementation("jakarta.validation:jakarta.validation-api")
-    implementation("io.swagger.core.v3:swagger-annotations:2.2.14")
-    implementation("org.springdoc:springdoc-openapi-ui:1.6.6")
-    implementation("org.openapitools:openapi-generator-gradle-plugin:7.8.0")
+    implementation("org.openapitools:openapi-generator-gradle-plugin:$openapiGeneratorPluginVer")
+    implementation("org.springdoc:springdoc-openapi-ui:$springDocVer")
+    implementation("io.swagger.core.v3:swagger-annotations:$swaggerAnnotationsVer")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
@@ -43,14 +46,7 @@ kotlin {
     }
 }
 
-sourceSets["main"].java.srcDir(file("$buildDir/gen"))
-
-// tasks.register("generate spring-boot-openapi-generation-service 1.0.0 server", GenerateTask.class) {
-//     generatorName.set("spring")
-//     outputDir.set("$buildDir/generated")
-//     ignoreFileOverride.set(".openapi-generator-ignore")
-// }
-
+sourceSets["main"].java.srcDir(file(gen))
 
 tasks.withType<Test> {
     useJUnitPlatform()

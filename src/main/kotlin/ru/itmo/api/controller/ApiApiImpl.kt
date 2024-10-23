@@ -1,6 +1,15 @@
 package ru.itmo.api.controller
 
-import ru.itmo.api.controller.ApiApi
+import org.springframework.http.ResponseEntity
+import org.springframework.web.bind.annotation.RestController
+import ru.itmo.api.mapper.toBookPage
+import ru.itmo.api.model.BookPage
+import ru.itmo.api.service.BookService
 
-class ApiApiImpl : ApiApi {
+@RestController
+class ApiApiImpl(private val bookService: BookService) : ApiApi {
+
+    override fun getBookPage(page: Int): ResponseEntity<BookPage> {
+        return ResponseEntity.ok(bookService.find(page).toBookPage())
+    }
 }
