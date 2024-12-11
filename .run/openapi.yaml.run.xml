@@ -14,11 +14,11 @@
         </CliArgumentViewModel>
         <CliArgumentViewModel>
           <option name="name" value="packageName" />
-          <option name="value" value="ru.itmo.api" />
+          <option name="value" value="ru.itmo.books" />
         </CliArgumentViewModel>
         <CliArgumentViewModel>
           <option name="name" value="modelPackage" />
-          <option name="value" value="ru.itmo.api.model" />
+          <option name="value" value="ru.itmo.books.model" />
         </CliArgumentViewModel>
         <CliArgumentViewModel>
           <option name="name" value="modelMutable" />
@@ -26,7 +26,7 @@
         </CliArgumentViewModel>
         <CliArgumentViewModel>
           <option name="name" value="apiPackage" />
-          <option name="value" value="ru.itmo.api.model.api" />
+          <option name="value" value="ru.itmo.books.model.api" />
         </CliArgumentViewModel>
       </list>
     </option>

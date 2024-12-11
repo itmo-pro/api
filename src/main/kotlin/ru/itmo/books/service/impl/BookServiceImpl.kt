@@ -1,8 +1,8 @@
-package ru.itmo.api.service.impl
+package ru.itmo.books.service.impl
 
 import org.springframework.stereotype.Service
-import ru.itmo.api.model.Book
-import ru.itmo.api.service.BookService
+import ru.itmo.books.model.Book
+import ru.itmo.books.service.BookService
 import java.util.UUID
 
 @Service

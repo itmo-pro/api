@@ -1,4 +1,4 @@
-package ru.itmo.api.model
+package ru.itmo.books.model
 
 import java.util.Objects
 import com.fasterxml.jackson.annotation.JsonProperty

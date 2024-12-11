@@ -1,4 +1,4 @@
-package ru.itmo.api.config
+package ru.itmo.books.config
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration

@@ -1,8 +1,8 @@
-package ru.itmo.api.model
+package ru.itmo.books.model
 
 import java.util.Objects
 import com.fasterxml.jackson.annotation.JsonProperty
-import ru.itmo.api.model.Sort
+import ru.itmo.books.model.Sort
 import jakarta.validation.constraints.DecimalMax
 import jakarta.validation.constraints.DecimalMin
 import jakarta.validation.constraints.Email

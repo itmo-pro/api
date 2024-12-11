@@ -3,11 +3,11 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
 */
-package ru.itmo.api.controller
+package ru.itmo.books.controller
 
-import ru.itmo.api.model.Book
-import ru.itmo.api.model.BookPage
-import ru.itmo.api.model.Error
+import ru.itmo.books.model.Book
+import ru.itmo.books.model.BookPage
+import ru.itmo.books.model.Error
 import io.swagger.v3.oas.annotations.*
 import io.swagger.v3.oas.annotations.enums.*
 import io.swagger.v3.oas.annotations.media.*

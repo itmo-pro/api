@@ -1,9 +1,9 @@
-package ru.itmo.api.model
+package ru.itmo.books.model
 
 import java.util.Objects
 import com.fasterxml.jackson.annotation.JsonProperty
-import ru.itmo.api.model.Book
-import ru.itmo.api.model.Pageable
+import ru.itmo.books.model.Book
+import ru.itmo.books.model.Pageable
 import jakarta.validation.constraints.DecimalMax
 import jakarta.validation.constraints.DecimalMin
 import jakarta.validation.constraints.Email

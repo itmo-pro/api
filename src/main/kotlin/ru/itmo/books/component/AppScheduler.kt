@@ -1,8 +1,8 @@
-package ru.itmo.api.component
+package ru.itmo.books.component
 
 import org.springframework.scheduling.annotation.Scheduled
 import org.springframework.stereotype.Component
-import ru.itmo.api.util.lazyLogger
+import ru.itmo.books.util.lazyLogger
 
 @Component
 class AppScheduler {

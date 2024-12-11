@@ -1,4 +1,4 @@
-package ru.itmo.api.util
+package ru.itmo.books.util
 
 import org.slf4j.LoggerFactory.getLogger
 

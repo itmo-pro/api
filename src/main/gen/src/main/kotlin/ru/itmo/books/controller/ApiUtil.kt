@@ -1,4 +1,4 @@
-package ru.itmo.api.controller
+package ru.itmo.books.controller
 
 import org.springframework.web.context.request.NativeWebRequest
 

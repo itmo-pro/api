@@ -1,6 +1,6 @@
-package ru.itmo.api.service
+package ru.itmo.books.service
 
-import ru.itmo.api.model.Book
+import ru.itmo.books.model.Book
 
 fun interface BookService {
 
