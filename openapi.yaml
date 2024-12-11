@@ -1,6 +1,6 @@
 openapi: 3.0.1
 info:
-  title: Books API
+  title: Book API
   version: 1.0.0
 servers:
   - url: http://localhost:8080
@@ -9,7 +9,7 @@ paths:
     get:
       tags:
         - Book
-      summary: Get books page
+      summary: Get book page
       operationId: getBookPage
       parameters:
         - name: page

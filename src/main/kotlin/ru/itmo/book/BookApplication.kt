@@ -1,4 +1,4 @@
-package ru.itmo.books
+package ru.itmo.book
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

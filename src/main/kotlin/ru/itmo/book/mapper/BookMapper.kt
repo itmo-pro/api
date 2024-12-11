@@ -1,8 +1,8 @@
-package ru.itmo.books.mapper
+package ru.itmo.book.mapper
 
-import ru.itmo.books.model.Book
-import ru.itmo.books.model.BookPage
-import ru.itmo.books.model.Pageable
+import ru.itmo.book.model.Book
+import ru.itmo.book.model.BookPage
+import ru.itmo.book.model.Pageable
 
 fun Iterable<Book>.toBookPage(): BookPage = BookPage(
     content = toList(),

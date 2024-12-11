@@ -1,4 +1,4 @@
-package ru.itmo.books
+package ru.itmo.book
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
