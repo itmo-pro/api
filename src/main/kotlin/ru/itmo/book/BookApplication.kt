@@ -1,12 +1,12 @@
-package ru.itmo.api
+package ru.itmo.book
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class ApiApplication
+class BookApplication
 
 @Suppress("SpreadOperator")
 fun main(args: Array<String>) {
-    runApplication<ApiApplication>(*args)
+    runApplication<BookApplication>(*args)
 }

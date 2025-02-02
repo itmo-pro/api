@@ -1,13 +1,13 @@
 spring:
   application:
-    name: api
+    name: book
 
 management:
   endpoints:
     enabled-by-default: false
     web:
       exposure:
-        include: health,prometheus
+        include: health,prometheus,info,metric
   endpoint:
     health:
       probes:
